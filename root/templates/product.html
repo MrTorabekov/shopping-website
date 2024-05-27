@@ -6,10 +6,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .nav-link {
-          @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-accent hover:bg-primary;
+            @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-accent hover:bg-primary;
         }
-        .product{
-            text-align:center;
+
+        .product {
+            text-align: center;
         }
 
     </style>
@@ -39,16 +40,16 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
                 <li>
-                    <a aria-current="page" class="nav-link" href="#" target="_blank">Home</a>
+                    <a aria-current="page" class="nav-link" href="/">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#" target="_blank">Products</a>
+                    <a class="nav-link" href="/product">Products</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#" target="_blank">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#" target="_blank">Contact</a>
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -59,7 +60,8 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {% for product in products %}
         <div class="bg-white rounded-lg shadow-md overflow-hidden product">
-            <p align="center"><img alt="A high-quality and visually stunning product image, showcasing the product's unique design, premium materials, and attention to detail, making it a true standout in its category."
+            <p align="center"><img
+                    alt="A high-quality and visually stunning product image, showcasing the product's unique design, premium materials, and attention to detail, making it a true standout in its category."
                     class="w- h-48 object-cover" src="{{ product.image.url }}"/></p>
             <div class="p-4">
                 <h2 class="text-xl font-bold text-secondary mb-2">{{ product.product_name }}</h2>
