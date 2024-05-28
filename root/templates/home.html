@@ -14,7 +14,7 @@
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a class="flex items-center" href="#" target="_blank">
-            <span class="self-center text-xl font-semibold whitespace-nowrap text-secondary">Logo</span>
+            <span class="self-center text-xl flex-container whitespace-nowrap text-secondary">Logo</span>
         </a>
         <div class="flex md:order-2">
             <button class="text-white bg-secondary hover:bg-accent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
@@ -35,16 +35,16 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
                 <li>
-                    <a aria-current="page" class="nav-link" href="/" >Home</a>
+                    <a aria-current="page" class="nav-link" href="/" >Uy</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="/product">Products</a>
+                    <a class="nav-link" href="/product">Mahsulotlar</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="/about" >About</a>
+                    <a class="nav-link" href="/about" >Jamoa</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="/contact" >Contact</a>
+                    <a class="nav-link" href="/contact" >Joylashuv</a>
                 </li>
             </ul>
         </div>
@@ -53,7 +53,7 @@
 <div class="container mx-auto my-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="flex flex-col justify-center">
-            <h1 class="text-4xl font-bold text-secondary mb-4">Bizning web sahifamizga xush kelibsiz!</h1>
+            <h1 class="text-4xl flex-container text-secondary mb-4">Bizning web sahifamizga xush kelibsiz!</h1>
             <p class="text-gray-700 mb-6">
                 Siz bizning sahifamizada har xil mahsulotlar va ularni
                 narxlari bilan tanishib chiqishingiz mumkun va qiziqarli ma'lumotlar ham yo'q emas.
@@ -69,12 +69,12 @@
     </div>
 
     <div class="bg-white rounded-lg shadow-md p-8">
-        <h2 class="text-3xl font-bold text-secondary mb-4">Mahsulotlar</h2>
+        <h2 class="text-3xl flex-container text-secondary mb-4">Mahsulotlar🛒</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {% for i in homes %}
             <div class="bg-gray-100 rounded-lg overflow-hidden product">
-                <h3 class="text-xl font-bold text-secondary mb-2">{{ i.product_name }}</h3>
+                <h3 style="color: saddlebrown" class="text-xl flex-container text-secondary mb-2">{{ i.product_name }}</h3>
                 <p align="center"><img alt="A visually stunning and captivating image of one of our featured products, showcasing its unique design, premium materials, and attention to detail, making it a standout offering."
                      class="h-48 object-cover" src="{{ i.image.url }}"/></p>
                 <div class="p-4">
@@ -82,7 +82,7 @@
                     <p class="text-gray-700 mb-4">
                         {{ i.text }}
                     </p>
-                    <p class="text-xl font-bold text-accent">${{ i.price }}</p>
+                    <p  style="color: darkslategray" class="text-xl flex-container text-accent">${{ i.price }}</p>
                 </div>
             </div>
             {% endfor %}
